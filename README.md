@@ -41,8 +41,8 @@ go to your private repo settings and add the reviewers as the collaborators.
 
 ## Java assignment reviewers
 - [weikiat87](https://github.com/weikiat87)
-- [sruthiganesh-HC](https://github.com/sruthiganesh-HC)
-- [abhi-agridence](https://github.com/abhi-agridence)
+- [Ravi](https://github.com/ShankarRM)
+- [Sheng Kai](https://github.com/Propius)
 
 ## Getting Started
 
