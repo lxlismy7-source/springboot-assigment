@@ -10,6 +10,7 @@ import com.agridence.microservice.Assignment.repository.NoteRepository;
 import com.agridence.microservice.Assignment.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
@@ -36,7 +37,7 @@ public class NoteService {
 
 
 
-    public Page<NoteResponse> getUserNotes(Authentication authentication) {
+    public Page<NoteResponse> getUserNotes(Authentication authentication, Pageable pageable) {
         User user = getUserFromAuthentication(authentication);
         Page<Note> notes = noteRepository.findByUserId(user.getId(), pageable);
         return notes.map(this::mapToResponse);

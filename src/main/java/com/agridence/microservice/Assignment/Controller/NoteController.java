@@ -33,7 +33,7 @@ public class NoteController {
     public ResponseEntity<Page<NoteResponse>> getUserNotes(
             Authentication authentication,
             @PageableDefault(size = 10, sort = "createdAt", direction = Sort.Direction.DESC) Pageable pageable) {
-        Page<NoteResponse> notes = noteService.getUserNotes(authentication);
+        Page<NoteResponse> notes = noteService.getUserNotes(authentication,pageable);
         return ResponseEntity.ok(notes);
     }
     @GetMapping("/{id}")
